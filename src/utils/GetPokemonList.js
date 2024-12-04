@@ -1,9 +1,5 @@
 import { pokemonData } from "../../public/pokemonData";
-
-const generateRandomNum = () => Math.floor(Math.random() * (151 - 1)) + 1;
-
-const generateRandomHealth = () =>
-  (Math.floor(Math.random() * (20 - 6)) + 6) * 10;
+import { generateRandomNum, generateRandomHealth } from "./NumGenerator";
 
 const createUrls = () => {
   const randomNum = generateRandomNum();
