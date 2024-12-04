@@ -1,1 +1,11 @@
+#game {
+    height: calc(100vh - 66px); /* Calculates the height of the header component */
+    /* Might have to do a max-width */
+}
 
+#scores {
+    font-size: 1.2rem;
+
+    height: 80px;
+    padding: 10px;
+}

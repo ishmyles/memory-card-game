@@ -1,0 +1,10 @@
+#cards {
+    height: calc(100% - 80px); /* Calculates the height of the scores component */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+
+    padding: 30px;
+}
