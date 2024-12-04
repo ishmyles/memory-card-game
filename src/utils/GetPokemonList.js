@@ -1,3 +1,5 @@
+import { pokemonData } from "../../public/pokemonData";
+
 const generateRandomNum = () => Math.floor(Math.random() * (151 - 1)) + 1;
 
 const generateRandomHealth = () =>
@@ -10,8 +12,9 @@ const createUrls = () => {
 
 async function getPokemonList() {
   const pokemonUrls = [];
+  const listLength = 12;
 
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < listLength; i++) {
     pokemonUrls.push(createUrls());
   }
 
@@ -25,6 +28,9 @@ async function getPokemonList() {
     )
   )
     .then((pokemonArr) => {
+      if (pokemonArr.length !== listLength)
+        throw new Error("Insufficient cards!");
+
       return pokemonArr.map((pokemon) => ({
         id: pokemon.id,
         name: pokemon.name,
@@ -38,6 +44,7 @@ async function getPokemonList() {
       console.error("Failed to fetch one or more of these URLs:");
       console.log(pokemonUrls);
       console.error(err);
+      return pokemonData;
     });
 }
 
