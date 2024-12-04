@@ -2,3 +2,9 @@ h1 {
     padding: 10px;
     /* border: 1px solid white; */
 }
+
+@media (max-width: 425px) {
+    h1 {
+        text-align: center;
+    }
+}

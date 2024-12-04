@@ -1,5 +1,5 @@
 import "./Header.css"
 
 export default function Header() {
-    return <h1>Memory Card Game</h1>
+    return <h1>Pokemon Memory Game</h1>
 }

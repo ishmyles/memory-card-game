@@ -11,7 +11,7 @@ const createUrls = () => {
 async function getPokemonList() {
   const pokemonUrls = [];
 
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 12; i++) {
     pokemonUrls.push(createUrls());
   }
 
