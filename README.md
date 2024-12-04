@@ -1,8 +1,30 @@
-# React + Vite
+# Memory Card Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Pokemon based memory card game built with React, JavaScript & Vite. This project was made to further develop the React skills learned so far.
 
-Currently, two official plugins are available:
+- [Visit the preview]()
+- Utilises the [PokeAPI](https://pokeapi.co/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+
+### Prerequisites
+
+- [NodeJS](https://nodejs.org/en)
+
+### Cloning
+
+```bash
+git clone git@github.com:ishmyles/memory-card-game.git
+cd memory-card-game
+```
+
+### Installing and using locally
+
+To install the project, use the following commands:
+
+```bash
+npm install
+npm run build
+```
+
+To use the application, open the `index.html` file located in the `dist` directory
