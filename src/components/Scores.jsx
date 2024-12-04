@@ -1,8 +1,8 @@
-export default function Scores() {
+export default function Scores({scores}) {
     return (
         <div id="scores">
-            <p><strong>Score:</strong> 0</p>
-            <p><strong>High Score:</strong> 0</p>
+            <p><strong>Score:</strong> {scores.currentScore}</p>
+            <p><strong>High Score:</strong> {scores.highScore}</p>
         </div>
     )
 }
