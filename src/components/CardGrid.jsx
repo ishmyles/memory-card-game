@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import { getPokemonList } from "../utils/GetPokemonList";
+import { shuffleArray } from "../utils/ShuffleArray";
 import "./CardGrid.css"
 
-import { createUrls } from "../utils/CreateUrls";
-import { shuffleArray } from "../utils/ShuffleArray";
 import Card from "./Card";
 
 export default function CardGrid({ updateScores, resetScores }) {
@@ -22,6 +22,7 @@ export default function CardGrid({ updateScores, resetScores }) {
             }
             updateScores();
         }
+        
         shuffleCards();
     }
 
@@ -30,39 +31,11 @@ export default function CardGrid({ updateScores, resetScores }) {
     }
   
     useEffect(() => {
-        const pokemonUrls = [];
-
-        for (let i = 0; i < 2; i++) {
-            pokemonUrls.push(createUrls());
+        async function getPokemonData() {
+            const pokemonArr = await getPokemonList();
+            setPokemonList(pokemonArr);
         }
-
-        async function getPokemonList() {
-            Promise.all(pokemonUrls.map(url => 
-                fetch(url)
-                    .then(response => {
-                        return response.json()
-                    })
-                    .then(responseBody => responseBody)))
-                    .then(pokemonArr => {
-                        setPokemonList(pokemonArr.map(pokemon => 
-                            ({
-                                id: pokemon.id, 
-                                name: pokemon.name, 
-                                hp: 120, 
-                                type: pokemon.types[0].type.name, 
-                                img: pokemon.sprites.front_default, 
-                                moves: [pokemon.moves[0].move.name, pokemon.moves[1].move.name]
-                            })
-                        ));
-                    })
-                    .catch(err => {
-                        console.error('Failed to fetch one or more of these URLs:');
-                        console.log(pokemonUrls);
-                        console.error(err);
-                });
-        }
-
-        getPokemonList()
+        getPokemonData();
     }, []);
   
     return (

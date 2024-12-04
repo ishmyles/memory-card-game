@@ -18,7 +18,7 @@ const colorsDark = {
   red: "#D64B2B",
   whiteGrey: "#CDCBC7",
   purple: "#B27EA9",
-  blue: "#168CBC",
+  blue: "#1663A4",
   darkGreen: "#026D75",
 };
 
@@ -45,7 +45,7 @@ const generateCardColor = (type) => {
       return colorsLight.purple;
     case "water":
     case "ice":
-      return colorsLight.blue; //#1663A4
+      return colorsLight.blue;
     case "poison":
       return colorsLight.darkGreen;
     default:
@@ -76,7 +76,7 @@ const generateBgColor = (type) => {
       return colorsDark.purple;
     case "water":
     case "ice":
-      return colorsDark.blue; //#1663A4
+      return colorsDark.blue;
     case "poison":
       return colorsDark.darkGreen;
     default:
