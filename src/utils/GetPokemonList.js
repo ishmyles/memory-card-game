@@ -24,7 +24,11 @@ async function getPokemonList() {
     )
   )
     .then((pokemonArr) => {
-      if (pokemonArr.length !== listLength)
+      const uniquePokemonList = new Set(
+        pokemonArr.map((pokemon) => pokemon.id)
+      );
+
+      if (uniquePokemonList.size !== listLength)
         throw new Error("Insufficient cards!");
 
       return pokemonArr.map((pokemon) => ({
