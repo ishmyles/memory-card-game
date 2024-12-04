@@ -1,6 +1,5 @@
 #game {
     height: calc(100vh - 66px); /* Calculates the height of the header component */
-    /* Might have to do a max-width */
 }
 
 #scores {
