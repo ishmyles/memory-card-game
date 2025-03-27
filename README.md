@@ -2,7 +2,7 @@
 
 A Pokemon based memory card game built with React, JavaScript & Vite. This project was made to further develop the React skills learned so far.
 
-- [Visit the preview](https://nimble-cocada-db557e.netlify.app/)
+- [Visit the preview](https://ish-memory-game.netlify.app/)
 - Utilises the [PokeAPI](https://pokeapi.co/)
 
 ## Technologies Used
