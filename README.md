@@ -17,8 +17,8 @@ A Pokemon based memory card game built with React, JavaScript & Vite. This proje
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/ishmyles/cv-application.git
-   cd cv-application
+   git clone https://github.com/ishmyles/memory-card-game.git
+   cd memory-card-game
    ```
 
 2. **Install dependencies**:
