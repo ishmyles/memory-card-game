@@ -5,26 +5,40 @@ A Pokemon based memory card game built with React, JavaScript & Vite. This proje
 - [Visit the preview](https://nimble-cocada-db557e.netlify.app/)
 - Utilises the [PokeAPI](https://pokeapi.co/)
 
-## Getting Started
+## Technologies Used
 
-### Prerequisites
+- Vite
+- React
+- JavaScript
+- CSS
 
-- [NodeJS](https://nodejs.org/en)
+## Installation
 
-### Cloning
+1. **Clone the repository**:
 
-```bash
-git clone git@github.com:ishmyles/memory-card-game.git
-cd memory-card-game
-```
+   ```bash
+   git clone https://github.com/ishmyles/cv-application.git
+   cd cv-application
+   ```
 
-### Installing and using locally
+2. **Install dependencies**:
 
-To install the project, use the following commands:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm install
-npm run build
-```
+3. **Start the application**:
 
-To use the application, open the `index.html` file located in the `dist` directory
+   ```bash
+   npm run dev
+   ```
+
+   The app will be accessible at `http://localhost:5173`.
+
+4. **Terminating the application**:
+
+   Press Ctrl + C to terminate app.
+
+## App Design
+
+![](./DESIGN_FILES/MemoryCardGameDesign.jpg)
